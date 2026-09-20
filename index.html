@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haviella Homes — Quiet houses for open land</title>
+<meta name="description" content="Haviella Homes designs calm, glass-fronted houses that sit low in open landscapes.">
+<meta property="og:title" content="Haviella Homes">
+<meta property="og:description" content="Quiet houses for open land.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b2416'/%3E%3Cpath d='M8 22V10m16 12V10M8 16h16' stroke='%23ece9e1' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <p class="loader__name">Haviella Homes</p>
+  <p class="loader__count"><span id="pct">0</span>%</p>
+</div>
+
+<header class="nav">
+  <a href="#top" class="nav__brand">Haviella Homes</a>
+  <a href="#contact" class="nav__link">Contact</a>
+</header>
+
+<main id="top" class="track">
+  <div class="stage">
+    <canvas id="film" aria-label="A white glass-fronted house standing in an open meadow"></canvas>
+    <div class="veil" id="veil"></div>
+
+    <section class="ch ch--hero" data-a="-.05" data-b=".09">
+      <p class="lede">Quiet houses for open land.</p>
+      <p class="cue">Scroll to walk the site</p>
+    </section>
+
+    <section class="ch ch--left" data-a=".16" data-b=".30">
+      <h2>Built low. Set into the land.</h2>
+      <p>One clean volume on the horizon, sized to the meadow around it rather than against it.</p>
+    </section>
+
+    <section class="ch ch--right" data-a=".32" data-b=".43">
+      <h2>Light comes first.</h2>
+      <p>Full-height glass pulls the field, the sky and the hills into every room.</p>
+    </section>
+
+    <section class="ch ch--left" data-a=".54" data-b=".67">
+      <h2>Every side, considered.</h2>
+      <p>Walk the perimeter and the house changes, but it never loses its calm proportions.</p>
+    </section>
+
+    <section class="ch ch--right" data-a=".69" data-b=".84">
+      <h2>A frame for the view.</h2>
+      <p>Deep white edges hold the glazing like a picture frame. The landscape does the decorating.</p>
+    </section>
+
+    <section class="ch ch--outro" id="contact" data-a=".91" data-b="9" data-hold>
+      <h2>Haviella Homes</h2>
+      <p>Tell us about your land and we will tell you what could stand on it.</p>
+      <a class="btn" href="mailto:hello@haviellahomes.com">Start a conversation</a>
+      <small>© <span id="yr"></span> Haviella Homes</small>
+    </section>
+
+    <div class="rail" aria-hidden="true"><i id="bar"></i></div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
