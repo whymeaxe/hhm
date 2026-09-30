@@ -1,71 +1,155 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Haviella Homes — Quiet houses for open land</title>
 <meta name="description" content="Haviella Homes designs calm, glass-fronted houses that sit low in open landscapes.">
+<meta name="theme-color" content="#1b2416">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Haviella Homes">
 <meta property="og:description" content="Quiet houses for open land.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b2416'/%3E%3Cpath d='M8 22V10m16 12V10M8 16h16' stroke='%23ece9e1' stroke-width='2.5'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://whymeaxe.github.io/hhm/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2416'/%3E%3Cpath d='M10 22V10m12 12V10M10 16h12' stroke='%23ece9e1' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="frames/f_0059.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.remove('no-js')</script>
 </head>
-<body>
-<div class="loader" id="loader" role="status" aria-live="polite">
-  <p class="loader__name">Haviella Homes</p>
-  <p class="loader__count"><span id="pct">0</span>%</p>
+<body class="is-loading">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 256 256"><path fill="currentColor" d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"/></symbol>
+</svg>
+
+<a class="skip" href="#contact" id="skip">Skip to contact</a>
+
+<div class="loader" id="loader" role="status" aria-label="Loading">
+  <div class="loader__top">
+    <p class="loader__name">Haviella Homes</p>
+    <p class="loader__hint">Loading the film</p>
+  </div>
+  <p class="loader__count"><span id="count">0</span><small>%</small></p>
+  <i class="loader__bar"><b id="lbar"></b></i>
 </div>
 
-<header class="nav">
-  <a href="#top" class="nav__brand">Haviella Homes</a>
-  <a href="#contact" class="nav__link">Contact</a>
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="#top" aria-label="Haviella Homes, back to the start">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 25V7m16 18V7M8 16h16" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>
+      <span>Haviella Homes</span>
+    </a>
+    <a class="btn btn--sm" href="mailto:hello@haviellahomes.com"><span>Start a conversation</span><span class="btn__ico" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+  </nav>
 </header>
 
-<main id="top" class="track">
-  <div class="stage">
-    <canvas id="film" aria-label="A white glass-fronted house standing in an open meadow"></canvas>
-    <div class="veil" id="veil"></div>
+<main id="main">
+<div id="top" class="track">
+  <div class="stage" id="stage">
+    <canvas id="film" role="img" aria-label="A white glass-fronted house standing in an open meadow"></canvas>
 
-    <section class="ch ch--hero" data-a="-.05" data-b=".09">
-      <p class="lede">Quiet houses for open land.</p>
-      <p class="cue">Scroll to walk the site</p>
+    <div class="grade" aria-hidden="true">
+      <i class="g--base"></i><i class="g--left" id="gL"></i><i class="g--right" id="gR"></i>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="marks" id="marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="dim" id="dim" aria-hidden="true"></div>
+
+    <!-- data-a / data-b: scroll range (0–1) in which each chapter is on screen -->
+    <section class="ch ch--left ch--hero" data-a="-.05" data-b=".085">
+      <h1 class="hl"><span class="ln">Quiet houses</span><span class="ln">for open land.</span></h1>
+      <p class="sub">Calm, glass-fronted houses that sit low in open landscapes.</p>
+      <a class="btn" href="mailto:hello@haviellahomes.com"><span>Start a conversation</span><span class="btn__ico" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
     </section>
 
-    <section class="ch ch--left" data-a=".16" data-b=".30">
-      <h2>Built low. Set into the land.</h2>
+    <section class="ch ch--left" data-a=".105" data-b=".215" data-label="Built low">
+      <h2 class="hl"><span class="ln">Built low.</span><span class="ln">Set into the land.</span></h2>
       <p>One clean volume on the horizon, sized to the meadow around it rather than against it.</p>
     </section>
 
-    <section class="ch ch--right" data-a=".32" data-b=".43">
-      <h2>Light comes first.</h2>
+    <section class="ch ch--right" data-a=".285" data-b=".40" data-label="Light comes first">
+      <h2 class="hl"><span class="ln">Light comes first.</span></h2>
       <p>Full-height glass pulls the field, the sky and the hills into every room.</p>
     </section>
 
-    <section class="ch ch--left" data-a=".54" data-b=".67">
-      <h2>Every side, considered.</h2>
+    <section class="ch ch--left" data-a=".555" data-b=".665" data-label="Every side, considered">
+      <h2 class="hl"><span class="ln">Every side,</span><span class="ln">considered.</span></h2>
       <p>Walk the perimeter and the house changes, but it never loses its calm proportions.</p>
     </section>
 
-    <section class="ch ch--right" data-a=".69" data-b=".84">
-      <h2>A frame for the view.</h2>
+    <section class="ch ch--left" data-a=".70" data-b=".82" data-label="A frame for the view">
+      <h2 class="hl"><span class="ln">A frame</span><span class="ln">for the view.</span></h2>
       <p>Deep white edges hold the glazing like a picture frame. The landscape does the decorating.</p>
     </section>
 
-    <section class="ch ch--outro" id="contact" data-a=".91" data-b="9" data-hold>
-      <h2>Haviella Homes</h2>
-      <p>Tell us about your land and we will tell you what could stand on it.</p>
-      <a class="btn" href="mailto:hello@haviellahomes.com">Start a conversation</a>
-      <small>© <span id="yr"></span> Haviella Homes</small>
-    </section>
-
-    <div class="rail" aria-hidden="true"><i id="bar"></i></div>
+    <aside class="hud is-intro" id="hud" aria-label="Chapters">
+      <div class="hud__core">
+        <span class="hud__label" id="hudLabel">Scroll to walk the site</span>
+        <div class="rail" id="rail"><i class="rail__fill" id="bar"></i></div>
+        <span class="hud__pct" id="hudPct" aria-hidden="true">000</span>
+      </div>
+    </aside>
   </div>
+</div>
+
+<!-- Six houses: a cover-flow gallery, pinned and scrubbed with GSAP ScrollTrigger -->
+<section class="homes" id="homes" aria-labelledby="homes-h">
+  <div class="flow" id="flow" role="region" aria-roledescription="carousel" aria-label="Six houses">
+    <header class="homes__head">
+      <h2 class="hl" id="homes-h"><span class="ln">Six houses,</span><span class="ln">six settings.</span></h2>
+      <p>Stone, timber, glass and concrete, each set to its own ground.</p>
+    </header>
+
+    <ul class="cards" id="cards">
+      <li class="card" style="--src:url(homes/h1.webp)" data-title="Stone and timber lodge">
+        <figure><img src="homes/h1.webp" width="776" height="310" decoding="async" alt="A stone and timber lodge with a tall chimney, set among pines with mountains behind."><i class="shade"></i></figure>
+      </li>
+      <li class="card" style="--src:url(homes/h2.webp)" data-title="Glass pavilion with a pool">
+        <figure><img src="homes/h2.webp" width="776" height="310" decoding="async" alt="A flat-roofed modern pavilion with glass walls beside a long infinity pool."><i class="shade"></i></figure>
+      </li>
+      <li class="card" style="--src:url(homes/h3.webp)" data-title="Shingle house on the water">
+        <figure><img src="homes/h3.webp" width="776" height="310" decoding="async" alt="A navy shingle house with a wraparound porch and gardens, with water beyond."><i class="shade"></i></figure>
+      </li>
+      <li class="card" style="--src:url(homes/h4.webp)" data-title="Green-roof house above the sea">
+        <figure><img src="homes/h4.webp" width="776" height="310" decoding="async" alt="A concrete and glass house with a planted roof, standing above the sea."><i class="shade"></i></figure>
+      </li>
+      <li class="card" style="--src:url(homes/h5.webp)" data-title="Stone and timber farmhouse">
+        <figure><img src="homes/h5.webp" width="776" height="306" decoding="async" alt="A stone and timber farmhouse with a chimney, white fences and rolling hills behind."><i class="shade"></i></figure>
+      </li>
+      <li class="card" style="--src:url(homes/h6.webp)" data-title="Timber courtyard house">
+        <figure><img src="homes/h6.webp" width="776" height="306" decoding="async" alt="A dark timber courtyard house with glass walls, a red maple and a pool, in a forest."><i class="shade"></i></figure>
+      </li>
+    </ul>
+
+    <div class="deck" id="deck">
+      <div class="deck__core">
+        <button class="deck__btn" id="prev" type="button" aria-label="Previous house"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="deck__cap" aria-live="polite"><span class="deck__num" id="capNum">01</span><span class="deck__of">/ 06</span><span class="deck__mask"><span id="capTitle">Stone and timber lodge</span></span></p>
+        <i class="deck__bar" aria-hidden="true"><b id="deckFill"></b></i>
+        <button class="deck__btn" id="next" type="button" aria-label="Next house"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="contact__bg" aria-hidden="true"><img src="frames/f_0328.webp" alt="" width="1440" height="810" loading="lazy" decoding="async"></div>
+  <div class="contact__in">
+    <h2 class="hl" id="contact-h"><span class="ln">Tell us about your land and we will tell you what could stand on it.</span></h2>
+    <div class="outro__row">
+      <a class="btn btn--lg" id="cta" href="mailto:hello@haviellahomes.com"><span>Start a conversation</span><span class="btn__ico" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+      <p class="outro__meta"><span>&copy; <span id="yr">2026</span> Haviella Homes</span><a href="mailto:hello@haviellahomes.com">hello@haviellahomes.com</a><a href="#top" id="toTop">Back to top</a></p>
+    </div>
+  </div>
+  <div class="ghost" id="ghost" aria-hidden="true">Haviella Homes</div>
+</section>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
 <script src="script.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>
