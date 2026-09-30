@@ -34,7 +34,8 @@ scripts/extract-frames.sh   rebuild frames from a source video (needs ffmpeg)
   - `PORTRAIT` controls how the widescreen film is framed on phones.
 - **New video:** run `./scripts/extract-frames.sh your.mp4`, then update the frame numbers in the tuning block.
 - **Scroll length:** `.track { height: 900vh }` in `styles.css` (the last screen is covered by the gallery sliding up).
-- **Gallery:** add or swap houses by editing the `<li class="card">` items in `index.html` (image path in both `--src` and `<img>`, plus `data-title`). Scroll per house is `STEP_VH` in `gallery.js`.
+- **Gallery:** add or swap houses by editing the `<li class="card">` items in `index.html` (image path in both `--src` and `<img>`, plus `data-title`). The flow loops endlessly (buttons, arrow keys, drag/swipe); the scroll pin lasts `S` steps of `STEP_VH` screen-heights each, both in `gallery.js`.
+- **Motion:** the site respects the system "reduce motion" setting (the gallery becomes a plain grid). Add `?motion=full` to the URL to preview the full animation anyway.
 - **Share image:** `og.jpg` is referenced by its full `https://whymeaxe.github.io/hhm/` URL in `index.html`. Change it if the site moves to its own domain.
 
 ## Deploy (GitHub Pages)

@@ -169,7 +169,7 @@ html:not(.no-js) .homes{margin-top:-100vh;margin-top:-100svh}       /* slides up
 /* cover-flow layout, switched on by gallery.js */
 .homes.is-flow .flow{height:100vh;height:100svh;padding-bottom:0}
 .homes.is-flow .cards{position:absolute;inset:0;margin:0;display:block;z-index:1;perspective:1000px;transform-style:preserve-3d;touch-action:pan-y;
-  --cw:clamp(300px,34vw,620px)}
+  --cw:clamp(260px,28vw,520px)}
 .homes.is-flow .card{position:absolute;left:50%;top:53%;width:var(--cw);cursor:pointer;will-change:transform,opacity;transform-style:preserve-3d;backface-visibility:hidden}
 .homes.is-flow .card:focus-visible{outline-offset:6px}
 .homes.is-flow .card::after{                                  /* the reflection on the "floor" */

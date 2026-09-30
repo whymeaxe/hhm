@@ -29,7 +29,12 @@
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const lerp = (a, b, t) => a + (b - a) * t;
   const ease = t => t * t * (3 - 2 * t);
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Honours the OS "reduce motion" setting. Add ?motion=full to the URL to preview the full animation anyway.
+  const forced = /[?&]motion=full/.test(location.search);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches && !forced;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) console.info(forced
+    ? '[Haviella] Reduced motion is on in your system, but ?motion=full is set, so the full animation is shown.'
+    : '[Haviella] Reduced motion is on in your system, so animations are toned down and the gallery shows as a grid. Add ?motion=full to the URL to preview the full animation.');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   const canvas = $('#film'), ctx = canvas.getContext('2d');
